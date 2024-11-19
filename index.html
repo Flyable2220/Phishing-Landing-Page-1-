@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .video-container {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Phishing Test</h1>
+  <p>Click the button below to start the test and watch the video.</p>
+  <button id="startButton">Start Video</button>
+  
+  <div id="videoContainer" class="video-container" style="display: none;">
+    <video width="100%" height="auto" controls>
+      <source src="https://nyehealth-my.sharepoint.com/:v:/g/personal/htanko_nyehealth_org/Ebbrn-S4XT9Cjbcqd4rAzNgB5tkL4imvWBnD38HBicoTbQ?e=rs9vVR" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <script>
+    document.getElementById('startButton').addEventListener('click', function() {
+      document.getElementById('videoContainer').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
